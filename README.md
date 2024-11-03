@@ -11,13 +11,13 @@ API RESTful para consulta dos premiados do Golden Raspberry Awards na categoria 
 
 1. Clone o repositório:
 ```bash
-git clone <repository-url>
-cd golden-raspberry-api
+git clone https://github.com/mordente/outsera-test.git
+cd outsera-test
 ```
 
 2. Inicie a aplicação:
 ```bash
-docker-compose up
+docker-compose up --build
 ```
 
 A API estará disponível em `http://localhost:3000`
