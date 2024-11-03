@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      target: production
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: "file::memory:"
+
+  test:
+    build:
+      context: .
+      target: builder
+    environment:
+      NODE_ENV: test
+      DATABASE_URL: "file::memory:"
+    command: npm test 

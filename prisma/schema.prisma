@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db?mode=memory&cache=shared"
+}
+
+model Movie {
+  id        Int      @id @default(autoincrement())
+  year      Int
+  title     String
+  producer  String
+  winner    Boolean  @default(false)
+}
