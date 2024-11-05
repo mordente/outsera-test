@@ -7,12 +7,10 @@
     "prisma:generate": "prisma generate",
     "prisma:push": "prisma db push",
     "prestart": "npm run prisma:push",
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
     "test": "jest",
     "docker:build": "docker build -t golden-raspberry-api .",
-    "docker:dev": "docker-compose up",
     "docker:test": "docker-compose run test"
   },
   "keywords": [],
@@ -32,7 +30,6 @@
     "prisma": "^5.10.2",
     "supertest": "^6.3.4",
     "ts-jest": "^29.2.5",
-    "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3"
   }
 }
