@@ -17,7 +17,7 @@ cd outsera-test
 
 2. Inicie a aplicação:
 ```bash
-docker-compose up --build
+docker compose run --build --service-ports api
 ```
 
 A API estará disponível em `http://localhost:3000`
@@ -25,7 +25,7 @@ A API estará disponível em `http://localhost:3000`
 ## 🧪 Executando os Testes
 
 ```bash
-docker-compose run test
+docker compose run --build test
 ```
 
 ## 📚 API Endpoint
