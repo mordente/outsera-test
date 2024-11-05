@@ -8,14 +8,15 @@ services:
     ports:
       - "3000:3000"
     environment:
-      NODE_ENV: development
-      DATABASE_URL: "file::memory:"
+      - NODE_ENV=production
+    command: npm start
 
   test:
     build:
       context: .
       target: builder
     environment:
-      NODE_ENV: test
-      DATABASE_URL: "file::memory:"
-    command: npm test 
+      - NODE_ENV=test
+    command: npm test
+    volumes:
+      - ./data:/app/data

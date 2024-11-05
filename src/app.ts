@@ -12,7 +12,6 @@ class App {
     this.app = express();
     this.middleware();
     this.routes();
-    this.initializeDatabase();
     this.handleShutdown();
   }
 
@@ -47,5 +46,4 @@ class App {
 }
 
 const application = new App();
-export default application.app;
 export { application };
